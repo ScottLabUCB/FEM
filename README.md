@@ -4,7 +4,7 @@ These MATLAB codes are used for processing and analyzing fluctuation electron mi
 
 The workflow is as follows:
 
-1 - use dm4Reader to read in and name a stack of .dm4 files \\
+1 - use dm4Reader to read in and name a stack of .dm4 files \par
   Ex: test = dm4Reader();
 
 2 - create a full mask and ring mask from the mean stack image with RealspaceLattice01; see mask.png for full mask example
