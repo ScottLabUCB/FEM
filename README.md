@@ -7,7 +7,7 @@ The workflow is as follows:
 1 - use dm4Reader to read in and name a stack of .dm4 files
   Ex: test = dm4Reader();
 
-2 - create a full mask and ring mask from the mean stack image using RealspaceLattice01; see mask.png for sample of full mask
+2 - create a full mask and ring mask from the mean stack image with RealspaceLattice01; see mask.png for full mask example
   Ex: test_fullmask = RealspaceLattice01(mean(test.cube,3));
   
 3* - run FEM01_MaskCoords
