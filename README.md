@@ -1,5 +1,7 @@
 # FEM
 
+NOTE: The FEM4X series and loopFEM04 are updated vrsions of the FEM processing scripts. The README will be updated to reflect their use soon (and this message will be gone).
+
 These MATLAB codes are used for processing and analyzing fluctuation electron microscopy (FEM) data collected on transmission electron microscopes. They were developed at the Molecular Foundry and Lawrence Berkeley National Laboratory. They were developed by Colin Ophus, Ellis Kennedy, Mary Scott, and Peter Ercius. The codes provide information on structural variance and relative strains within amorphous thin films. Contact E.K. at ellisrae@berkeley.edu for assistance.
 
 The workflow is as follows: <br/>
