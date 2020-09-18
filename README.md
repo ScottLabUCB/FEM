@@ -27,3 +27,6 @@ Altenately, steps 3-6 can be performed together using loopFEM; coefs input is op
   
 For variance plots, plot sFEM_test.yy on th y-axis and sFEM_test.polarRadius on th x-axis. <br/>
 For percent relative strain, refer to sFEM.strainMeas.
+
+
+The script dm4Reader.m was developed by Peter ERcius at the Molecular Foundry, Lawrence Berkeley National LAboratory.
