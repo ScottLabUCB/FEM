@@ -31,4 +31,4 @@ For variance plots, plot sFEM_test.yy on th y-axis and sFEM_test.polarRadius on 
 For percent relative strain, refer to sFEM.strainMeas.
 
 
-The script dm4Reader.m was developed by Peter ERcius at the Molecular Foundry, Lawrence Berkeley National LAboratory.
+The script dm4Reader.m was developed by Peter Ercius at the Molecular Foundry, Lawrence Berkeley National Laboratory.
