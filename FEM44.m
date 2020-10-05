@@ -4,8 +4,8 @@ tic
 % Colin Ophus - 2019 Sept
 % 44 - elliptical polar transformation of all images
 
-%pixelSize = sFEM.scale;
-pixelSize = 0.0335; %TitanX in inverse nm
+pixelSize = sFEM.scale;
+%pixelSize = 0.0335; %TitanX in inverse nm
 rSigma = 0.1;
 tSigma = 1;
 rMax = 240;
