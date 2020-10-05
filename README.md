@@ -15,8 +15,7 @@ The workflow is as follows: <br/>
   Command: stack_fullmask = RealspaceLattice01(mean(stack.cube,3));
   Command: stack_ringmask = RealspaceLattice01(mean(stack.cube,3));
   
-   <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG" height="400">
-   <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG" height="400">
+   <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG" height="300"> <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG" height="300">
   
 3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. <br/>
   
@@ -37,7 +36,7 @@ Initial guess values correspond to: 1) y-coordinate of center, 2) x-coordinate o
   Sample parameters for experimental data: <br/>
    sFEM.coefsInit = [270 260 1.00 0.00 200 10000 20 150 200 15 15];
    
-   <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFEM43.PNG" height="400">
+   <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFEM43.PNG" height="300">
   
 6* - Run FEM44.m for a polar transformation of all images. This code has dependency on convolve02.m and exindex.m. These are NOT my or my colleagues' code. They were developed by D. Young and can be found on the Matlab File Exchange. <br/>
   Command: sFEM_stack = FEM44(sFEM_stack);
