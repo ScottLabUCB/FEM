@@ -55,7 +55,7 @@ __8__ - Run FEM46.m to calculate relative [exx eyy exy] strains. Multiply sFEM_s
   Command: sFEM_test = FEM01_MaskCoords(sFEM_stack);
   
   
-__Note:__Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
+__Note:__ Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
   
   Command: sFEM_stack = loopFEM04(stack.cube, stack_fullmask, stack_ringmask, coefs);
   
