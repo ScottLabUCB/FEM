@@ -16,7 +16,7 @@ The workflow is as follows: <br/>
 3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. <br/>
   Command: sFEM_stack = FEM41(stack.cube, stack_fullmask, stack_ringmask);
   If intensity is too low: <br/>
-  Command: sFEM_stack = FEM41(stack.cube {`*`}100, stack_fullmask, stack_ringmask);
+  Command: sFEM_stack = FEM41(stack.cube `*`100, stack_fullmask, stack_ringmask);
 
 4* - Run FEM42.m to normalize images within mask areas. <br/>
   Command: sFEM_stack = FEM42(sFEM_stack);
