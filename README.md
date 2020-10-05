@@ -17,7 +17,7 @@ The workflow is as follows: <br/>
   
    <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG" height="300"> <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG" height="300">
   
-3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. <br/>
+3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. Additionally, set your pixel size in the body of the code if it is not included in the metadata of your stack. <br/>
   
   Command: sFEM_stack = FEM41(stack.cube, stack_fullmask, stack_ringmask);
   
