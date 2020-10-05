@@ -8,7 +8,7 @@ These MATLAB codes are used for processing and analyzing fluctuation electron mi
 
 The workflow is as follows: <br/>
 
-**1 - Use dm4Reader.m to read in and name a stack of .dm4 files for experimental data. Select the file from a directory or type in file pathway. For simulated data, you can skip this step as long as data is a 3D stack of images. <br/>
+__1__ - Use dm4Reader.m to read in and name a stack of .dm4 files for experimental data. Select the file from a directory or type in file pathway. For simulated data, you can skip this step as long as data is a 3D stack of images. <br/>
   
   Command: stack = dm4Reader();
 
