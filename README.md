@@ -2,7 +2,7 @@
 
 NOTE: The FEM4X series and loopFEM04 are updated versions of the original FEM processing scripts. The README has been updated to reflect the newer versions.
 
-sampleStack.mat is a stack of 10 FEM images. It is already a data cube. The scale for the stack should be set to 0.022 in FEM41.
+sampleStack.mat is a stack of 10 FEM images. It is already a data cube. The scale for the stack should be set to 0.022 in FEM41. Scale is in inverse nm and is dependent on camera length.
 
 These MATLAB codes are used for processing and analyzing fluctuation electron microscopy (FEM) data collected on transmission electron microscopes. They take in 3D stacks of FEM data, perform elliptical correction (when desired), and provide information on intensity variance (medium-range ordering) and relative strain. They were developed at the Molecular Foundry and Lawrence Berkeley National Laboratory. They were developed by Colin Ophus, Ellis Kennedy, Mary Scott, and Peter Ercius. The codes provide information on structural variance and relative strains within amorphous thin films. Contact E.K. at ellisrae@berkeley.edu for assistance.
 
