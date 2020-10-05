@@ -7,21 +7,30 @@ These MATLAB codes are used for processing and analyzing fluctuation electron mi
 The workflow is as follows: <br/>
 
 1 - Use dm4Reader.m to read in and name a stack of .dm4 files for experimental data. Select the file from a directory or type in file pathway. For simulated data, you can skip this step as long as data is a 3D stack of images. <br/>
+  
   Command: stack = dm4Reader();
 
 2 - Create a full mask and ring mask from the mean stack image with RealspaceLattice01.m. Requires RealspaceLattice01.fig to be in same folder. Do not keep beam stop or central bright spot. <br/>
+  
   Command: stack_fullmask = RealspaceLattice01(mean(stack.cube,3));
   Command: stack_ringmask = RealspaceLattice01(mean(stack.cube,3));
   
+   ![Sample intensity fitting](https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG)
+  
 3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. <br/>
+  
   Command: sFEM_stack = FEM41(stack.cube, stack_fullmask, stack_ringmask);
+  
   If intensity is too low: <br/>
   Command: sFEM_stack = FEM41(stack.cube `*`100, stack_fullmask, stack_ringmask);
 
 4* - Run FEM42.m to normalize images within mask areas. <br/>
   Command: sFEM_stack = FEM42(sFEM_stack);
   
-5* - Run FEM43.m. The second input is optional. Running the command with the second input will fit your FEM patterns to the input parameters. This should be done when looking at relative strain, but not for medium-range order variance. Runnng the command without the second input will fit the FEM pattern based on initial guesses and output the fit parameters. The initial guess parameters must be added to the code directly. Initial guess values correspond to: 1) y-coordinate of center, 2) x-coordinate of center, 3) C ellipse fit parameter (should be 1.0 for guess), 4) B ellipse fit parameter (should be 0.0 for guess), 5) intensity beyond first ring or background intensity, 6) intensity between central bright spot and first ring, 7) first ring width, 8) first ring radius, 9) second ring radius, 10) inner Gaussian tail of ring, 11) outer Gaussian tail. The most important parameters for fitting are 1) through 8). Paramters 9) through 11) can be faily off and the FEM pattern will still be fit. If there is trouble with fitting, check that the intensity of your mean ring is between 500 and 2000 or scale your parameters accordingly. <br/>
+5* - Run FEM43.m. The second input is optional. Running the command with the second input will fit your FEM patterns to the input parameters. This should be done when looking at relative strain, but not for medium-range order variance. Runnng the command without the second input will fit the FEM pattern based on initial guesses and output the fit parameters. The initial guess parameters must be added to the body of the code directly. See image below for example output from FEM43. The ring and center should have the greates intensity and the fitting and actual image slices should be aligned.
+
+Initial guess values correspond to: 1) y-coordinate of center, 2) x-coordinate of center, 3) C ellipse fit parameter (should be 1.0 for guess), 4) B ellipse fit parameter (should be 0.0 for guess), 5) intensity beyond first ring or background intensity, 6) intensity between central bright spot and first ring, 7) first ring width, 8) first ring radius, 9) second ring radius, 10) inner Gaussian tail of ring, 11) outer Gaussian tail. The most important parameters for fitting are 1) through 8). Paramters 9) through 11) can be faily off and the FEM pattern will still be fit. If there is trouble with fitting, check that the intensity of your mean ring is between 500 and 2000 or scale your parameters accordingly. <br/>
+  
   Command: sFEM_stack = FEM43(sFEM_stack);
   
   Sample parameters for experimental data: <br/>
