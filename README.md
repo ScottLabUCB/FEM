@@ -52,7 +52,7 @@ __7__ - Run FEM45.m to compute mean and variance. A plot of the variance will be
   
 __8__ - Run FEM46.m to calculate relative [exx eyy exy] strains. Multiply sFEM_stack.strainMeas by 100 for percent relative strain. <br/>
   
-  Command: sFEM_test = FEM01_MaskCoords(sFEM_stack);
+  Command: sFEM_stack = FEM01_MaskCoords(sFEM_stack);
   
   
 __Note:__ Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
