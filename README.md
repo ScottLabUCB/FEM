@@ -44,7 +44,7 @@ __6__ - Run FEM44.m for a polar transformation of all images. This code has depe
   
   Command: sFEM_stack = FEM44(sFEM_stack);
   
-__7__ - Run FEM45.m to compute mean and variance. A plot of the variance will be displayed. sFEM_stack.radialVarNorm are the y-axis variance values and sFEM_stack.polarRadius are the x-axis k scattering vector values.  <br/>
+__7__ - Run FEM45.m to compute mean and variance. A plot of the variance will be displayed. sFEM_stack.radialVarNorm are the y-axis variance values and sFEM_stack.polarRadius are the x-axis k scattering vector (in inverse nm) values.  <br/>
   
   Command: sFEM_stack = FEM45(sFEM_stack);
   
