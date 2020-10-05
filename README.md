@@ -15,7 +15,8 @@ The workflow is as follows: <br/>
   Command: stack_fullmask = RealspaceLattice01(mean(stack.cube,3));
   Command: stack_ringmask = RealspaceLattice01(mean(stack.cube,3));
   
-   ![Sample intensity fitting](https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG)
+   ![Full Mask](https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG)
+   ![Ring Mask](https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG)
   
 3* - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. <br/>
   
