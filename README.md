@@ -37,7 +37,7 @@ The workflow is as follows: <br/>
   Command: sFEM_test = FEM01_MaskCoords(sFEM_stack);
   
   
-${html`*`}Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
+`*`Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
   Command: sFEM_stack = loopFEM04(stack.cube, stack_fullmask, stack_ringmask, coefs);
   
 For variance plots, plot sFEM_stack.radialVarNorm on the y-axis and sFEM_stack.polarRadius on th x-axis. <br/>
