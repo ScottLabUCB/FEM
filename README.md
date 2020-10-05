@@ -26,6 +26,8 @@ The workflow is as follows: <br/>
   
   Sample parameters for experimental data: <br/>
    sFEM.coefsInit = [270 260 1.00 0.00 200 10000 20 150 200 15 15];
+   
+   ![Sample intensity fitting](https://github.com/ScottLabUCB/FEM/blob/master/exampleFEM43.PNG)
   
 6* - Run FEM44.m for a polar transformation of all images. This code has dependency on convolve02.m and exindex.m. These are NOT my or my colleagues' code. They were developed by D. Young and can be found on the Matlab File Exchange. <br/>
   Command: sFEM_stack = FEM44(sFEM_stack);
