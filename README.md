@@ -27,6 +27,7 @@ __3__ - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity sh
   Command: sFEM_stack = FEM41(stack.cube `*`100, stack_fullmask, stack_ringmask);
 
 __4__ - Run FEM42.m to normalize images within mask areas. <br/>
+  
   Command: sFEM_stack = FEM42(sFEM_stack);
   
 __5__ - Run FEM43.m. The second input is optional. Running the command with the second input will fit your FEM patterns to the input parameters. This should be done when looking at relative strain, but not for medium-range order variance. Runnng the command without the second input will fit the FEM pattern based on initial guesses and output the fit parameters. The initial guess parameters must be added to the body of the code directly. See image below for example output from FEM43. The ring and center should have the greates intensity and the fitting and actual image slices should be aligned.
@@ -65,5 +66,5 @@ For percent relative strain, refer to sFEM_stack.strainMeas.
 
 The script dm4Reader.m was developed by Peter Ercius at the Molecular Foundry, Lawrence Berkeley National Laboratory. 
 
-The scripts exindex.m and convolve02.m were developed by David Young. 
+The scripts exindex.m and convolve02.m were developed by David Young. <br/>
 David Young (2020). Fast 2-D convolution (https://www.mathworks.com/matlabcentral/fileexchange/22619-fast-2-d-convolution), MATLAB Central File Exchange. Retrieved October 7, 2020.
