@@ -65,4 +65,5 @@ For percent relative strain, refer to sFEM_stack.strainMeas.
 
 The script dm4Reader.m was developed by Peter Ercius at the Molecular Foundry, Lawrence Berkeley National Laboratory. 
 
-The scripts exindex.m and convolve02.m were developed by David Young. David Young (2020). Fast 2-D convolution (https://www.mathworks.com/matlabcentral/fileexchange/22619-fast-2-d-convolution), MATLAB Central File Exchange. Retrieved October 7, 2020.
+The scripts exindex.m and convolve02.m were developed by David Young. 
+David Young (2020). Fast 2-D convolution (https://www.mathworks.com/matlabcentral/fileexchange/22619-fast-2-d-convolution), MATLAB Central File Exchange. Retrieved October 7, 2020.
