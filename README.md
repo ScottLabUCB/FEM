@@ -19,7 +19,7 @@ __2__ - Create a full mask and ring mask from the mean stack image with Realspac
   
    <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFullMask.PNG" height="300"> <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleRingMask.PNG" height="300">
   
-__3__ - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. Additionally, set your pixel size in the body of the code if it is not included in the metadata of your stack. <br/>
+__3__ - Run FEM41.m. Looking at your mean FEM image, the ring pixel intensity should be between 500 and 2000; if it is not, multiply your stack by an appropriate factor before running FEM41.m. Additionally, set your pixel size in the body of the code if it is not included in the metadata of your stack. This means you may need to comment out line #11. <br/>
   
   Command: sFEM_stack = FEM41(stack.cube, stack_fullmask, stack_ringmask);
   
@@ -41,7 +41,7 @@ Initial guess values correspond to: 1) y-coordinate of center, 2) x-coordinate o
    
    <img src="https://github.com/ScottLabUCB/FEM/blob/master/exampleFEM43.PNG" height="300">
   
-__6__ - Run FEM44.m for a polar transformation of all images. This code has dependency on convolve02.m and exindex.m. These are NOT my or my colleagues' code. They were developed by D. Young and can be found on the Matlab File Exchange. <br/>
+__6__ - Run FEM44.m for a polar transformation of all images. This code has dependency on convolve02.m, exindex.m, and progressbar.m. These are NOT my or my colleagues' code. The first two were developed by D. Young and the third was developed by Steve Hoelzer. They can be found on the Matlab File Exchange. <br/>
   
   Command: sFEM_stack = FEM44(sFEM_stack);
   
@@ -53,7 +53,7 @@ __7__ - Run FEM45.m to compute mean and variance. A plot of the variance will be
   
 __8__ - Run FEM46.m to calculate relative [exx eyy exy] strains. Multiply sFEM_stack.strainMeas by 100 for percent relative strain. <br/>
   
-  Command: sFEM_stack = FEM01_MaskCoords(sFEM_stack);
+  Command: sFEM_stack = FEM46(sFEM_stack);
   
   
 __Note:__ Altenately, steps 3-8 can be performed together using loopFEM04. The coefs input is optional. <br/>
@@ -68,3 +68,6 @@ The script dm4Reader.m was developed by Peter Ercius at the Molecular Foundry, L
 
 The scripts exindex.m and convolve02.m were developed by David Young. <br/>
 David Young (2020). Fast 2-D convolution (https://www.mathworks.com/matlabcentral/fileexchange/22619-fast-2-d-convolution), MATLAB Central File Exchange. Retrieved October 7, 2020.
+
+The script progressbar.m was developed by Steve Hoelzer. </br>
+Steve Hoelzer (2020). progressbar (https://www.mathworks.com/matlabcentral/fileexchange/6922-progressbar), MATLAB Central File Exchange. Retrieved October 9, 2020.
