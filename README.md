@@ -12,7 +12,7 @@ __1__ - Use dm4Reader.m to read in and name a stack of .dm4 files for experiment
   
   Command: stack = dm4Reader();
 
-__2__ - Create a full mask and ring mask from the mean stack image with RealspaceLattice01.m. Requires RealspaceLattice01.fig to be in same folder. Do not keep beam stop or central bright spot. <br/>
+__2__ - Create a full mask and ring mask from the mean stack image with RealspaceLattice01.m. Requires RealspaceLattice01.fig to be in same folder. Do not keep beam stop or central bright spot. Drag point on the mask and double click the polygon edes to add more points. Close the GUI when done. <br/>
   
   Command: stack_fullmask = RealspaceLattice01(mean(stack.cube,3));
   Command: stack_ringmask = RealspaceLattice01(mean(stack.cube,3));
